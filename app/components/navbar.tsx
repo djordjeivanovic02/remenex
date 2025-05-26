@@ -12,19 +12,21 @@ import {
   MobileNavMenu,
 } from "./ui/resizable-navbar";
 import { useState } from "react";
+import {useTranslations} from 'next-intl';
 
 export function NavbarDemo() {
+    const t = useTranslations('NavBar');
   const navItems = [
     {
-      name: "Features",
+      name: t('projects'),
       link: "#features",
     },
     {
-      name: "Pricing",
+      name: t('technologies'),
       link: "#pricing",
     },
     {
-      name: "Contact",
+      name: t('contact'),
       link: "#contact",
     },
   ];
@@ -38,8 +40,8 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <NavbarButton variant="secondary">Test</NavbarButton>
+            <NavbarButton variant="primary">{t('call')}</NavbarButton>
           </div>
         </NavBody>
 
