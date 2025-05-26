@@ -29,5 +29,22 @@
   },
   "Slider": {
     "title": "Tehnologije kojima verujemo"
+  },
+  "Form": {
+    "title": "Kontaktirajte nas",
+    "description": "Zanima vas ono što radimo ili imate neko pitanje? Slobodno nas kontaktirajte — rado ćemo vam odgovoriti.",
+    "firstName": "Ime",
+    "secondName": "Prezime",
+    "email": "Email adresa",
+    "message": "Poruka",
+    "firstNamePlaceholder": "Petar",
+    "secondNamePlaceholder": "Petrovic",
+    "emailPlaceholder": "petar@remenex.com",
+    "messagePlaceholder": "Napišite poruku...",
+    "sendMessage": "Pošalji Poruku"
+  },
+  "Notification": {
+    "success": "Vaša poruka je uspešno poslata našem timu. Očekujte odgovor u najkraćem mogućem roku.",
+    "error": "Nažalost, nismo uspeli da pošaljemo vašu poruku. Pokušajte ponovo kasnije."
   }
 }

@@ -29,5 +29,22 @@
   },
   "Slider": {
     "title": "Technologies we trust"
+  },
+  "Form": {
+    "title": "Get in Touch",
+    "description": "Interested in what we do or have something on your mind? Reach out — we’d love to hear from you.",
+    "firstName": "First name",
+    "secondName": "Second name",
+    "email": "Email address",
+    "message": "Message",
+    "firstNamePlaceholder": "Piter",
+    "secondNamePlaceholder": "James",
+    "emailPlaceholder": "piter@company.com",
+    "messagePlaceholder": "Write a message...",
+    "sendMessage": "Send Message"
+  },
+  "Notification": {
+    "success": "Your message has been successfully sent to our team. We’ll get back to you as soon as possible.",
+    "error": "Unfortunately, we couldn't send your message. Please try again later."
   }
 }

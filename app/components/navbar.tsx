@@ -16,6 +16,8 @@ import { Locale, useTranslations } from "next-intl";
 import { getUserLocale, setUserLocale } from "../services/locale";
 import { TimelineDemo } from "./timeline";
 import TechCarousel from "./slider";
+import { CustomForm } from "./customForm";
+import Footer from "./footer";
 
 export function NavbarDemo() {
   const t = useTranslations("NavBar");
@@ -120,7 +122,10 @@ export function NavbarDemo() {
       <div className="w-full max-w-7xl flex flex-col items-center mx-auto py-40">
         <TechCarousel />
       </div>
-      <div className="h-[300vh]"></div>
+      <div className="w-full max-w-7xl flex flex-col items-center mx-auto">
+        <CustomForm />
+      </div>
+      <Footer />
     </div>
   );
 }
