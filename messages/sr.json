@@ -4,5 +4,30 @@
     "technologies": "Tehnologije",
     "contact": "Kontakt",
     "call": "Pozovi"
+  },
+  "OurJourney": {
+    "title": "Put od ideje do rešenja",
+    "description": "Naša misija sa Remenex-om od samog početka bila je jasna — redefinisati kvalitet i efikasnost digitalnih rešenja. Pogledajte kako je izgledao razvoj našeg tima i proizvoda kroz vreme."
+  },
+  "Timeline": {
+    "first": "Ideja",
+    "second": "Vizija",
+    "third": "Realnost",
+    "firstQuote": "Web sajt ne treba da impresionira, treba da objasni, ubedi i pokrene.",
+    "firstQuoteAuthor": "Remenex tim",
+    "secondQuote": "Kôd je alat. Ideja je ono što menja svet.",
+    "secondQuoteAuthor": "Remenex tim",
+    "thirdTitle": "Šta jedno softversko rešenje treba da ima? 🤔",
+    "options": {
+      "first": "Intuitivno korisničko iskustvo",
+      "second": "Savršena prilagodljivost uređajima",
+      "third": "Munjevite performanse",
+      "forth": "Čist i modularan kod",
+      "fifth": "Pouzdana sigurnost",
+      "sixth": "Skalabilna arhitektura"
+    }
+  },
+  "Slider": {
+    "title": "Tehnologije kojima verujemo"
   }
 }

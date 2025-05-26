@@ -4,5 +4,30 @@
     "technologies": "Technologies",
     "contact": "Contact",
     "call": "Call"
+  },
+  "OurJourney": {
+    "title": "From Vision to Product",
+    "description": "Our mission with Remenex has been clear from the very beginning — to redefine the quality and efficiency of digital solutions. Here's a look at how our team and product have evolved over time."
+  },
+  "Timeline": {
+    "first": "Build",
+    "second": "Your",
+    "third": "Dream",
+    "firstQuote": "Simplicity is the soul of efficiency.",
+    "firstQuoteAuthor": "Austin Freeman",
+    "secondQuote": "Technology is best when it brings people together.",
+    "secondQuoteAuthor": "Matt Mullenweg",
+    "thirdTitle": "What should a software solution have? 🤔",
+    "options": {
+      "first": "Intuitive user experience",
+      "second": "Perfect device adaptability",
+      "third": "Lightning-fast performance",
+      "forth": "Clean and modular code",
+      "fifth": "Reliable security",
+      "sixth": "Scalable architecture"
+    }
+  },
+  "Slider": {
+    "title": "Technologies we trust"
   }
 }

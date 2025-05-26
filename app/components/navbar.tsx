@@ -11,22 +11,41 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "./ui/resizable-navbar";
-import { useState } from "react";
-import {useTranslations} from 'next-intl';
+import { useEffect, useState } from "react";
+import { Locale, useTranslations } from "next-intl";
+import { getUserLocale, setUserLocale } from "../services/locale";
+import { TimelineDemo } from "./timeline";
+import TechCarousel from "./slider";
 
 export function NavbarDemo() {
-    const t = useTranslations('NavBar');
+  const t = useTranslations("NavBar");
+  const tSlider = useTranslations("Slider");
+  const [currentLocale, setCurrentLocale] = useState<Locale>();
+
+  useEffect(() => {
+    const handleLocale = async () => {
+      const loc = await getUserLocale();
+      setCurrentLocale(loc as Locale);
+    };
+    handleLocale();
+  }, []);
+
+  const switchLocale = (newLocale: Locale) => {
+    setUserLocale(newLocale);
+    setCurrentLocale(newLocale);
+  };
+
   const navItems = [
     {
-      name: t('projects'),
+      name: t("projects"),
       link: "#features",
     },
     {
-      name: t('technologies'),
+      name: t("technologies"),
       link: "#pricing",
     },
     {
-      name: t('contact'),
+      name: t("contact"),
       link: "#contact",
     },
   ];
@@ -34,14 +53,21 @@ export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-black">
       <Navbar>
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Test</NavbarButton>
-            <NavbarButton variant="primary">{t('call')}</NavbarButton>
+            <NavbarButton
+              variant="secondary"
+              onClick={() =>
+                switchLocale((currentLocale == "sr" ? "en" : "sr") as Locale)
+              }
+            >
+              {currentLocale == "sr" ? "en" : "sr"}
+            </NavbarButton>
+            <NavbarButton variant="primary">{t("call")}</NavbarButton>
           </div>
         </NavBody>
 
@@ -63,7 +89,7 @@ export function NavbarDemo() {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-neutral-300"
               >
                 <span className="block">{item.name}</span>
               </a>
@@ -74,20 +100,26 @@ export function NavbarDemo() {
                 variant="primary"
                 className="w-full"
               >
-                Login
+                {t("call")}
               </NavbarButton>
               <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
+                onClick={() =>
+                  switchLocale((currentLocale == "sr" ? "en" : "sr") as Locale)
+                }
+                variant="secondary"
+                className="w-full text-white"
               >
-                Book a call
+                {currentLocale == "sr" ? "en" : "sr"}
               </NavbarButton>
             </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-      <SparklesPreview/>
+      <SparklesPreview />
+      <TimelineDemo />
+      <div className="w-full max-w-7xl flex flex-col items-center mx-auto py-40">
+        <TechCarousel />
+      </div>
       <div className="h-[300vh]"></div>
     </div>
   );
