@@ -30,7 +30,7 @@ export async function sendMail({
         process.env.NEXT_PUBLIC_ADMIN1_EMAIL,
         process.env.NEXT_PUBLIC_ADMIN2_EMAIL,
       ].join(","),
-      subject: "Nova poruka sa remenex sajta",
+      subject: "Nova poruka sa remenex sajta.",
       html: `
             <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f9fafb; color: #111827;">
                 <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); overflow: hidden;">
