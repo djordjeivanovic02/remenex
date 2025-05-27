@@ -1,7 +1,9 @@
-import Image from "next/image";
-import { SparklesCore } from "./components/ui/sparkles";
-import { SparklesPreview } from "./components/sparklesPreview";
+import { CustomForm } from "./components/customForm";
+import Footer from "./components/footer";
 import { NavbarDemo } from "./components/navbar";
+import TechCarousel from "./components/slider";
+import { SparklesPreview } from "./components/sparklesPreview";
+import { TimelineDemo } from "./components/timeline";
 
 // const products: {
 //   id: number;
@@ -45,7 +47,7 @@ import { NavbarDemo } from "./components/navbar";
 //     link: "https://github.com/djordjeivanovic02/HelloWork/tree/master/Aplikacija/HelloWork",
 //     thumbnail: "/images/hellowork.png"
 //   },
-  
+
 //   {
 //     id: 7,
 //     title: "DevScore",
@@ -76,7 +78,7 @@ import { NavbarDemo } from "./components/navbar";
 //     link: "https://github.com/djordjeivanovic02/HelloWork/tree/master/Aplikacija/HelloWork",
 //     thumbnail: "/images/hellowork.png"
 //   },
-  
+
 //   {
 //     id: 12,
 //     title: "Haos Travel",
@@ -93,6 +95,25 @@ import { NavbarDemo } from "./components/navbar";
 
 export default function Home() {
   return (
-        <NavbarDemo/>
+    <main className="relative bg-black">
+      <NavbarDemo />
+      <div>
+        <SparklesPreview />
+      </div>
+      <TimelineDemo />
+      <div
+        id="technologies"
+        className="w-full max-w-7xl pt-40 flex flex-col items-center mx-auto"
+      >
+        <TechCarousel />
+      </div>
+      <div
+        id="contact"
+        className="w-full max-w-7xl py-40 flex flex-col items-center mx-auto"
+      >
+        <CustomForm />
+      </div>
+      <Footer />
+    </main>
   );
 }

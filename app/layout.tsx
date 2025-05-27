@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
-import { ToastContainer, Bounce } from "react-toastify";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Bounce, ToastContainer } from "react-toastify";
+import "./globals.css";
+import { getUserLocale } from "./services/locale";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,20 +16,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Remenex - Custom Software Development & IT Consulting",
-  description:
-    "Remenex is a software development and IT consulting company that helps businesses grow with tailored digital solutions. We deliver reliable, scalable, and innovative software across various industries.",
-  openGraph: {
-    url: "https://www.remenex.com",
-    title: "Remenex - Custom Software Development & IT Consulting",
-    description:
-      "Remenex delivers reliable and scalable software solutions tailored to your business needs. Let us help you transform your digital presence.",
-    images: [{ url: "https://remenex.com/images/logo.png" }],
-  },
-  keywords:
-    "software development company, custom software development, IT consulting, web and mobile app development, softverska kompanija, razvoj softvera, izrada aplikacija, IT konsalting, digitalna transformacija, softverski outsourcing",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getUserLocale();
+  const isSerbian = locale === "sr";
+
+  return {
+    title: isSerbian
+      ? "Remenex - Prilagođeni softver i IT konsalting."
+      : "Remenex - Custom Software Development & IT Consulting",
+    description: isSerbian
+      ? "Remenex je kompanija za razvoj softvera i IT konsalting. Pomažemo firmama da rastu kroz digitalna rešenja prilagođena njihovim potrebama."
+      : "Remenex is a software development and IT consulting company that helps businesses grow with tailored digital solutions.",
+    openGraph: {
+      url: "https://www.remenex.com",
+      title: isSerbian
+        ? "Remenex - Softverski razvoj i IT konsalting"
+        : "Remenex - Custom Software Development & IT Consulting",
+      description: isSerbian
+        ? "Remenex isporučuje pouzdana softverska rešenja po meri za vaše poslovanje."
+        : "Remenex delivers reliable and scalable software solutions tailored to your business needs.",
+      images: [{ url: "https://remenex.com/images/logo.png" }],
+    },
+    keywords: isSerbian
+      ? "razvoj softvera, softverska kompanija, IT konsalting, digitalna transformacija, izrada aplikacija, softverski outsourcing"
+      : "software development company, custom software development, IT consulting, web and mobile app development, digital transformation, software outsourcing",
+  };
+}
 
 export default async function RootLayout({
   children,

@@ -1,27 +1,23 @@
 "use client";
-import { SparklesPreview } from "./sparklesPreview";
+import { Locale, useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { getUserLocale, setUserLocale } from "../services/locale";
 import {
+  MobileNav,
+  MobileNavHeader,
+  MobileNavMenu,
+  MobileNavToggle,
   Navbar,
+  NavbarButton,
+  NavbarLogo,
   NavBody,
   NavItems,
-  MobileNav,
-  NavbarLogo,
-  NavbarButton,
-  MobileNavHeader,
-  MobileNavToggle,
-  MobileNavMenu,
 } from "./ui/resizable-navbar";
-import { useEffect, useState } from "react";
-import { Locale, useTranslations } from "next-intl";
-import { getUserLocale, setUserLocale } from "../services/locale";
-import { TimelineDemo } from "./timeline";
-import TechCarousel from "./slider";
-import { CustomForm } from "./customForm";
-import Footer from "./footer";
 
 export function NavbarDemo() {
   const t = useTranslations("NavBar");
-  const tSlider = useTranslations("Slider");
   const [currentLocale, setCurrentLocale] = useState<Locale>();
 
   useEffect(() => {
@@ -40,11 +36,11 @@ export function NavbarDemo() {
   const navItems = [
     {
       name: t("projects"),
-      link: "#features",
+      link: "#projects",
     },
     {
       name: t("technologies"),
-      link: "#pricing",
+      link: "#technologies",
     },
     {
       name: t("contact"),
@@ -53,79 +49,148 @@ export function NavbarDemo() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showPhone, setShowPhone] = useState(false);
 
   return (
-    <div className="relative w-full bg-black">
-      <Navbar>
-        <NavBody>
+    <Navbar>
+      <NavBody>
+        <NavbarLogo />
+        <NavItems items={navItems} />
+        <div className="relative min-w-32 flex items-center gap-4">
+          <NavbarButton
+            href="#"
+            variant="secondary"
+            onClick={() =>
+              switchLocale((currentLocale == "sr" ? "en" : "sr") as Locale)
+            }
+          >
+            {currentLocale == "sr" ? "en" : "sr"}
+          </NavbarButton>
+          <NavbarButton
+            href="#"
+            variant="primary"
+            onClick={() => setShowPhone(!showPhone)}
+          >
+            {t("call")}
+          </NavbarButton>
+          {showPhone && (
+            <div
+              className="absolute top-10 right-0 rounded-md gap-2 flex flex-col bg-neutral-950 p-2"
+              style={{
+                boxShadow:
+                  "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
+              }}
+            >
+              <Link
+                href="tel:067 730 3883"
+                className="flex gap-1 text-white text-sm hover:text-neutral-500 duration-300"
+              >
+                <Image
+                  src="/icons/call.svg"
+                  width={20}
+                  height={20}
+                  alt="call"
+                />
+                067 730 3883
+              </Link>
+              <Link
+                href="tel:063 347 054"
+                className=" flex  gap-1 text-white text-sm hover:text-neutral-500 duration-300"
+              >
+                <Image
+                  src="/icons/call.svg"
+                  width={20}
+                  height={20}
+                  alt="call"
+                />
+                063 347 054
+              </Link>
+            </div>
+          )}
+        </div>
+      </NavBody>
+
+      <MobileNav>
+        <MobileNavHeader>
           <NavbarLogo />
-          <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
+          <MobileNavToggle
+            isOpen={isMobileMenuOpen}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          />
+        </MobileNavHeader>
+
+        <MobileNavMenu
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        >
+          {navItems.map((item, idx) => (
+            <a
+              key={`mobile-link-${idx}`}
+              href={item.link}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="relative text-neutral-300"
+            >
+              <span className="block">{item.name}</span>
+            </a>
+          ))}
+          <div className=" relative flex w-full flex-col gap-4">
             <NavbarButton
-              variant="secondary"
+              href="#"
+              onClick={() => {
+                setShowPhone(!showPhone);
+              }}
+              variant="primary"
+              className="w-full"
+            >
+              {t("call")}
+            </NavbarButton>
+            {showPhone && (
+              <div
+                className="absolute w-full top-10 right-0 rounded-md gap-2 flex items-center z-50 justify-center bg-neutral-950 p-2"
+                style={{
+                  boxShadow:
+                    "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
+                }}
+              >
+                <Link
+                  href="tel:067 730 3883"
+                  className="flex gap-1 text-white text-sm hover:text-neutral-500 duration-300"
+                >
+                  <Image
+                    src="/icons/call.svg"
+                    width={20}
+                    height={20}
+                    alt="call"
+                  />
+                  067 730 3883
+                </Link>
+                <Link
+                  href="tel:063 347 054"
+                  className=" flex  gap-1 text-white text-sm hover:text-neutral-500 duration-300"
+                >
+                  <Image
+                    src="/icons/call.svg"
+                    width={20}
+                    height={20}
+                    alt="call"
+                  />
+                  063 347 054
+                </Link>
+              </div>
+            )}
+            <NavbarButton
+              href="#"
               onClick={() =>
                 switchLocale((currentLocale == "sr" ? "en" : "sr") as Locale)
               }
+              variant="secondary"
+              className="w-full text-white"
             >
               {currentLocale == "sr" ? "en" : "sr"}
             </NavbarButton>
-            <NavbarButton variant="primary">{t("call")}</NavbarButton>
           </div>
-        </NavBody>
-
-        <MobileNav>
-          <MobileNavHeader>
-            <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
-          </MobileNavHeader>
-
-          <MobileNavMenu
-            isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                {t("call")}
-              </NavbarButton>
-              <NavbarButton
-                onClick={() =>
-                  switchLocale((currentLocale == "sr" ? "en" : "sr") as Locale)
-                }
-                variant="secondary"
-                className="w-full text-white"
-              >
-                {currentLocale == "sr" ? "en" : "sr"}
-              </NavbarButton>
-            </div>
-          </MobileNavMenu>
-        </MobileNav>
-      </Navbar>
-      <SparklesPreview />
-      <TimelineDemo />
-      <div className="w-full max-w-7xl flex flex-col items-center mx-auto py-40">
-        <TechCarousel />
-      </div>
-      <div className="w-full max-w-7xl flex flex-col items-center mx-auto">
-        <CustomForm />
-      </div>
-      <Footer />
-    </div>
+        </MobileNavMenu>
+      </MobileNav>
+    </Navbar>
   );
 }

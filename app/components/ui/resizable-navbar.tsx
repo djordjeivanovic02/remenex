@@ -2,10 +2,10 @@
 import { cn } from "@/app/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import {
-  motion,
   AnimatePresence,
-  useScroll,
+  motion,
   useMotionValueEvent,
+  useScroll,
 } from "motion/react";
 import Image from "next/image";
 
@@ -198,7 +198,7 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
+  // onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -268,7 +268,7 @@ export const NavbarButton = ({
   | React.ComponentPropsWithoutRef<"button">
 )) => {
   const baseStyles =
-    "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+    "px-4 select-none py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
     primary:
