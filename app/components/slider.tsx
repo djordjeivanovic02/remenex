@@ -21,7 +21,6 @@ const technologies = [
   { name: ".NET", src: "/tech/net.svg" },
   { name: "Redux", src: "/tech/redux.svg" },
   { name: "Selenium", src: "/tech/selenium.svg" },
-  // Dodaj slobodno još...
 ];
 
 export default function TechCarousel() {

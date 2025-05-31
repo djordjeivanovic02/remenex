@@ -224,6 +224,22 @@ export function TimelineDemo() {
                 </div>
               </div>
             </Link>
+            <Link href="https://profatest.netlify.app/" target="_blank">
+              <div className="relative group h-20 md:h-44 lg:h-60 w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
+                <Image
+                  src="/images/profa.png"
+                  alt="Profa"
+                  width={500}
+                  height={500}
+                  className="object-top h-full w-full object-cover transition-all duration-500 group-hover:brightness-50"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="text-white text-xl md:text-2xl lg:text-3xl font-bold animate-fade-in-up">
+                    Profa
+                  </span>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       ),

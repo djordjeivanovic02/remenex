@@ -1,12 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import { Label } from "@radix-ui/react-label";
-import { Input } from "./ui/input";
-import { cn } from "../lib/utils";
-import { Textarea } from "./ui/textarea";
 import { useTranslations } from "next-intl";
-import { sendMail } from "../mail/mail";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { cn } from "../lib/utils";
+import { sendMail } from "../mail/mail";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 
 export function CustomForm() {
   const t = useTranslations("Form");
@@ -93,7 +93,7 @@ export function CustomForm() {
             id="message"
             placeholder={t("messagePlaceholder")}
             rows={5}
-            className="px-3"
+            className="px-3 text-base"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
