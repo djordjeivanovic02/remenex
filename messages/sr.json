@@ -3,7 +3,8 @@
     "projects": "Projekti",
     "technologies": "Tehnologije",
     "contact": "Kontakt",
-    "call": "Pozovi"
+    "call": "Pozovi",
+    "team": "Nas tim"
   },
   "OurJourney": {
     "title": "Put od ideje do rešenja",
@@ -15,7 +16,7 @@
     "third": "Realnost",
     "firstQuote": "Web sajt ne treba da impresionira, treba da objasni, ubedi i pokrene.",
     "firstQuoteAuthor": "Remenex tim",
-    "secondQuote": "Kôd je alat. Ideja je ono što menja svet.",
+    "secondQuote": "Kod je alat. Ideja je ono što menja svet.",
     "secondQuoteAuthor": "Remenex tim",
     "thirdTitle": "Šta jedno softversko rešenje treba da ima? 🤔",
     "options": {
@@ -29,6 +30,11 @@
   },
   "Slider": {
     "title": "Tehnologije kojima verujemo"
+  },
+  "Team": {
+    "leke": "Specijalizovan za backend razvoj i izradu skalabilnih aplikacija.",
+    "djole": "Full-stack developer koji voli da spaja moderne tehnologije i praktična rešenja.",
+    "mix": "Kreativni dizajner posvećen kreiranju intuitivnih i vizuelno privlačnih interfejsa."
   },
   "Form": {
     "title": "Kontaktirajte nas",

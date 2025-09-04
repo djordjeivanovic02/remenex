@@ -3,7 +3,8 @@
     "projects": "Projects",
     "technologies": "Technologies",
     "contact": "Contact",
-    "call": "Call"
+    "call": "Call",
+    "team": "Our team"
   },
   "OurJourney": {
     "title": "From Vision to Product",
@@ -29,6 +30,11 @@
   },
   "Slider": {
     "title": "Technologies we trust"
+  },
+  "Team": {
+    "leke": "Specialized in backend development and building scalable applications.",
+    "djole": "Full-stack developer who likes to combine modern technologies and practical solutions.",
+    "mix": "Creative designer dedicated to creating intuitive and visually appealing interfaces."
   },
   "Form": {
     "title": "Get in Touch",
