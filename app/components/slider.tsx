@@ -9,6 +9,7 @@ const technologies = [
   { name: "Next", src: "/tech/next.svg" },
   { name: "PHP", src: "/tech/php.svg" },
   { name: "Docker", src: "/tech/docker.svg" },
+  { name: "Webflow", src: "/tech/webflow.svg" },
   { name: "Figma", src: "/tech/figma.svg" },
   { name: "Flutter", src: "/tech/flutter.svg" },
   { name: "Git", src: "/tech/git.svg" },

@@ -8,7 +8,7 @@
   },
   "OurJourney": {
     "title": "Put od ideje do rešenja",
-    "description": "Naša misija sa Remenex-om od samog početka bila je jasna — redefinisati kvalitet i efikasnost digitalnih rešenja. Pogledajte kako je izgledao razvoj našeg tima i proizvoda kroz vreme."
+    "description": "Naša misija sa Remenex-om od samog početka bila je jasna - redefinisati kvalitet i efikasnost digitalnih rešenja. Pogledajte kako je izgledao razvoj našeg tima i proizvoda kroz vreme."
   },
   "Timeline": {
     "first": "Ideja",
@@ -31,14 +31,14 @@
   "Slider": {
     "title": "Tehnologije kojima verujemo"
   },
-  "Team": {
-    "leke": "Specijalizovan za backend razvoj i izradu skalabilnih aplikacija.",
-    "djole": "Full-stack developer koji voli da spaja moderne tehnologije i praktična rešenja.",
-    "mix": "Kreativni dizajner posvećen kreiranju intuitivnih i vizuelno privlačnih interfejsa."
+ "Team": {
+  "leke": "Backend razvoj",
+  "djole": "Full-stack razvoj",
+  "mix": "Dizajn i animacije"
   },
   "Form": {
     "title": "Kontaktirajte nas",
-    "description": "Zanima vas ono što radimo ili imate neko pitanje? Slobodno nas kontaktirajte — rado ćemo vam odgovoriti.",
+    "description": "Zanima vas ono što radimo ili imate neko pitanje? Slobodno nas kontaktirajte - rado ćemo vam odgovoriti.",
     "firstName": "Ime",
     "secondName": "Prezime",
     "email": "Email adresa",

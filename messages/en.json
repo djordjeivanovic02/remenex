@@ -8,7 +8,7 @@
   },
   "OurJourney": {
     "title": "From Vision to Product",
-    "description": "Our mission with Remenex has been clear from the very beginning — to redefine the quality and efficiency of digital solutions. Here's a look at how our team and product have evolved over time."
+    "description": "Our mission with Remenex has been clear from the very beginning - to redefine the quality and efficiency of digital solutions. Here's a look at how our team and product have evolved over time."
   },
   "Timeline": {
     "first": "Build",
@@ -32,13 +32,13 @@
     "title": "Technologies we trust"
   },
   "Team": {
-    "leke": "Specialized in backend development and building scalable applications.",
-    "djole": "Full-stack developer who likes to combine modern technologies and practical solutions.",
-    "mix": "Creative designer dedicated to creating intuitive and visually appealing interfaces."
+    "leke": "Backend developing",
+    "djole": "Full-stack developing",
+    "mix": "Design and animations"
   },
   "Form": {
     "title": "Get in Touch",
-    "description": "Interested in what we do or have something on your mind? Reach out — we’d love to hear from you.",
+    "description": "Interested in what we do or have something on your mind? Reach out - we’d love to hear from you.",
     "firstName": "First name",
     "secondName": "Second name",
     "email": "Email address",
