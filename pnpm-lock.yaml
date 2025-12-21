@@ -53,6 +53,9 @@ importers:
       react-i18next:
         specifier: ^15.5.2
         version: 15.5.2(i18next@25.2.1(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      react-snowfall:
+        specifier: ^2.4.0
+        version: 2.4.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-toastify:
         specifier: ^11.0.5
         version: 11.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -1864,6 +1867,9 @@ packages:
     peerDependencies:
       react: ^19.1.0
 
+  react-fast-compare@3.2.2:
+    resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+
   react-i18next@15.5.2:
     resolution: {integrity: sha512-ePODyXgmZQAOYTbZXQn5rRsSBu3Gszo69jxW6aKmlSgxKAI1fOhDwSu6bT4EKHciWPKQ7v7lPrjeiadR6Gi+1A==}
     peerDependencies:
@@ -1882,6 +1888,12 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-snowfall@2.4.0:
+    resolution: {integrity: sha512-KAPMiGnxt11PEgC2pTVrTQsvk5jt1kLUtG+ZamiKLphTZ7GiYT1Aa5kX6jp4jKWq1kqJHchnGT9CDm4g86A5Gg==}
+    peerDependencies:
+      react: "^16.8 ||\_17.x || 18.x || 19.x"
+      react-dom: ^16.8 || 17.x || 18.x || 19.x
 
   react-toastify@11.0.5:
     resolution: {integrity: sha512-EpqHBGvnSTtHYhCPLxML05NLY2ZX0JURbAdNYa6BUkk+amz4wbKBQvoKQAB0ardvSarUBuY4Q4s1sluAzZwkmA==}
@@ -4067,6 +4079,8 @@ snapshots:
       react: 19.1.0
       scheduler: 0.26.0
 
+  react-fast-compare@3.2.2: {}
+
   react-i18next@15.5.2(i18next@25.2.1(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3):
     dependencies:
       '@babel/runtime': 7.27.1
@@ -4078,6 +4092,12 @@ snapshots:
       typescript: 5.8.3
 
   react-is@16.13.1: {}
+
+  react-snowfall@2.4.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      react-fast-compare: 3.2.2
 
   react-toastify@11.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
