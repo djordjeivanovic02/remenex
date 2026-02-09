@@ -1,15 +1,13 @@
 "use client";
-import React from "react";
 import { SparklesCore } from "./ui/sparkles";
-import Image from "next/image";
 
 export function SparklesPreview() {
   return (
     <div className="h-[100vh] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center text-white relative z-20">
         <span className="relative inline-block">
-        R
-        <Image
+          R
+          {/* <Image
           src="/images/christmass_hat.png"
           alt="Christmas hat"
           width={126}
@@ -25,9 +23,9 @@ export function SparklesPreview() {
             md:-top-2.5 md:-left-4 md:w-20
             lg:-top-5 lg:-left-7 lg:w-24
           "
-        />
-      </span>
-      <span>emenex</span>
+        /> */}
+        </span>
+        <span>emenex</span>
       </h1>
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}

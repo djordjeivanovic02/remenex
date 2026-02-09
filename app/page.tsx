@@ -3,15 +3,13 @@ import Footer from "./components/footer";
 import { NavbarDemo } from "./components/navbar";
 import OurTeam from "./components/ourTeam";
 import TechCarousel from "./components/slider";
-import CustomSnowfall from "./components/snowfall";
 import { SparklesPreview } from "./components/sparklesPreview";
 import { TimelineDemo } from "./components/timeline";
-
 
 export default function Home() {
   return (
     <main className="relative bg-black">
-      <CustomSnowfall/>
+      {/* <CustomSnowfall/> */}
       <NavbarDemo />
       <div>
         <SparklesPreview />

@@ -15,6 +15,38 @@ export function TimelineDemo() {
             {t("firstQuoteAuthor")}
           </p>
           <div className="grid grid-cols-2 gap-4">
+            <Link href="https://www.myplannery.com/" target="_blank">
+              <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
+                <Image
+                  src="/images/myplannery.png"
+                  alt="myplannery image"
+                  width={500}
+                  height={500}
+                  className="object-top h-full w-full object-cover transition-all duration-500 group-hover:brightness-50"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="text-white text-xl md:text-2xl lg:text-3xl font-bold animate-fade-in-up">
+                    MyPlannery
+                  </span>
+                </div>
+              </div>
+            </Link>
+            <Link href="https://almarmedia.com/" target="_blank">
+              <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
+                <Image
+                  src="/images/almarmedia.png"
+                  alt="almarmedia image"
+                  width={500}
+                  height={500}
+                  className="object-top h-full w-full object-cover transition-all duration-500 group-hover:brightness-50"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="text-white text-xl md:text-2xl lg:text-3xl font-bold animate-fade-in-up">
+                    Almarmedia
+                  </span>
+                </div>
+              </div>
+            </Link>
             <Link href="https://polovni-telefoni.rs" target="_blank">
               <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
                 <Image
@@ -48,8 +80,21 @@ export function TimelineDemo() {
                 </div>
               </div>
             </Link>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: t("second"),
+      content: (
+        <div>
+          <p className="mb-8 text-xs font-normal md:text-sm text-neutral-200">
+            <i className="font-bold">{t("secondQuote")}</i> -{" "}
+            {t("secondQuoteAuthor")}
+          </p>
+          <div className="grid grid-cols-2 gap-4">
             <Link href="https://1legion.com" target="_blank">
-              <div className="relative group h-full w-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
+              <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
                 <Image
                   src="/images/1legion.png"
                   alt="1legion image"
@@ -64,10 +109,7 @@ export function TimelineDemo() {
                 </div>
               </div>
             </Link>
-            <Link
-              href="https:authorrise.ai"
-              target="_blank"
-            >
+            <Link href="https://authorrise.ai" target="_blank">
               <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
                 <Image
                   src="/images/authorrise.png"
@@ -83,19 +125,6 @@ export function TimelineDemo() {
                 </div>
               </div>
             </Link>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: t("second"),
-      content: (
-        <div>
-          <p className="mb-8 text-xs font-normal md:text-sm text-neutral-200">
-            <i className="font-bold">{t("secondQuote")}</i> -{" "}
-            {t("secondQuoteAuthor")}
-          </p>
-          <div className="grid grid-cols-2 gap-4">
             <Link href="https://github.com/Remenex/Holaa" target="_blank">
               <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
                 <Image
@@ -145,38 +174,6 @@ export function TimelineDemo() {
                 </div>
               </div>
             </Link> */}
-            <Link href="https://remenex.com" target="_blank">
-              <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
-                <Image
-                  src="/images/remenex.png"
-                  alt="Remenex image"
-                  width={500}
-                  height={500}
-                  className="object-top h-full w-full object-cover transition-all duration-500 group-hover:brightness-50"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <span className="text-white text-xl md:text-2xl lg:text-3xl font-bold animate-fade-in-up">
-                    Remenex
-                  </span>
-                </div>
-              </div>
-            </Link>
-            <Link href="https://webavenue.capital/" target="_blank">
-              <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
-                <Image
-                  src="/images/webavenue.png"
-                  alt="Webavenue image"
-                  width={500}
-                  height={500}
-                  className="object-top h-full w-full object-cover transition-all duration-500 group-hover:brightness-50"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <span className="text-white text-xl md:text-2xl lg:text-3xl font-bold animate-fade-in-up">
-                    Webavenue
-                  </span>
-                </div>
-              </div>
-            </Link>
           </div>
         </div>
       ),
@@ -209,6 +206,39 @@ export function TimelineDemo() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
+            <Link href="https://remenex.com" target="_blank">
+              <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
+                <Image
+                  src="/images/remenex.png"
+                  alt="Remenex image"
+                  width={500}
+                  height={500}
+                  className="object-top h-full w-full object-cover transition-all duration-500 group-hover:brightness-50"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="text-white text-xl md:text-2xl lg:text-3xl font-bold animate-fade-in-up">
+                    Remenex
+                  </span>
+                </div>
+              </div>
+            </Link>
+            <Link href="https://webavenue.capital/" target="_blank">
+              <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
+                <Image
+                  src="/images/webavenue.png"
+                  alt="Webavenue image"
+                  width={500}
+                  height={500}
+                  className="object-top h-full w-full object-cover transition-all duration-500 group-hover:brightness-50"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="text-white text-xl md:text-2xl lg:text-3xl font-bold animate-fade-in-up">
+                    Webavenue
+                  </span>
+                </div>
+              </div>
+            </Link>
+            {/*
             <Link href="https://www.shakibhere.com/" target="_blank">
               <div className="relative group h-full w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
                 <Image
@@ -225,7 +255,7 @@ export function TimelineDemo() {
                 </div>
               </div>
             </Link>
-            {/* <Link href="https://planinskastaza.rs" target="_blank">
+             <Link href="https://planinskastaza.rs" target="_blank">
               <div className="relative gmd:h-44 lg:h-60  w-full overflow-hidden rounded-lg shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
                 <Image
                   src="/images/planinskastaza.png"
