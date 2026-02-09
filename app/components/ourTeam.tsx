@@ -13,19 +13,19 @@ export default function OurTeam() {
   }[] = [
     {
       name: "Djordje Ivanovic",
-      proffesion: ["Developer"],
+      proffesion: ["Head of Development"],
       description: t("djole"),
       image: "djole.jpg",
     },
     {
       name: "Aleksa Jovanovic",
-      proffesion: ["Developer"],
+      proffesion: ["Tehnical Lead"],
       description: t("leke"),
       image: "leke.jpg",
     },
     {
       name: "Mihailo Petrovic",
-      proffesion: ["Designer"],
+      proffesion: ["Lead of Design"],
       description: t("mix"),
       image: "mix.jpg",
     },
