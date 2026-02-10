@@ -54,7 +54,7 @@ export default function OurTeam() {
               image={member.image}
             />
 
-            <div
+            {/* <div
               className={`mt-2 w-[250px] text-center text-sm text-gray-700 transition-all duration-300 ${
                 isActive
                   ? "opacity-100 translate-y-0"
@@ -62,7 +62,7 @@ export default function OurTeam() {
               }`}
             >
               {member.description}
-            </div>
+            </div> */}
           </div>
         );
       })}
